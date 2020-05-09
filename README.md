@@ -1,7 +1,7 @@
 # iot-learning
 
 ## Linkit 7697 for Arduino
-last modified date: 2020/05/09  
+last modified: 2020/05/09  
 email: michael_7150@yahoo.com.tw  
 
 ---
