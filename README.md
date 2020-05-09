@@ -18,36 +18,37 @@ PS,如果照流程操作有任何問題，極有可能是因為板子或是傳�
 ### 1. Install Arduino IDE
 ### 2. Add Linkit 7697 Support Package
 由於 Arduino IDE 預設沒有支援 Linkit 7697  
-所以需要手動加入 Linkit 7697 Support Package
+所以需要手動加入 Linkit 7697 Support Package  
 
 The board support package URL for LinkIt 7697 is as follows:  
 ```
 http://download.labs.mediatek.com/package_mtk_linkit_7697_index.json
 ```
 
-a. Open File > Preferences dialog, as shown below:
+a. Open File > Preferences dialog, as shown below:  
+
 ![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878160/3/1490173858177/file_preferences_menu.png)
 
-b. Add the following URL to the Additional Boards Manager URLs field: 
+b. Add the following URL to the Additional Boards Manager URLs field:  
 ```
 http://download.labs.mediatek.com/package_mtk_linkit_7697_index.json
-```
-![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878182/1/1490171727851/preferences_dialog.png)
+```  
+![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878182/1/1490171727851/preferences_dialog.png)  
 
 c. Click "OK" to end the dialog.  
 
 d. Select Tools > Board > Boards Manager... to open the Boards Manager dialog:  
 
-![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878239/1/1490246867677/tools_board_menu.png)
+![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878239/1/1490246867677/tools_board_menu.png)  
 
 e. Wait for the board manager to download the package information from the URL you just provided. After completion, you'll find a LinkIt 7697 by MediaTek Labs board package in the list. You can also type LinkIt in the search box, as shown below:  
-'![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878241/1/1490246920554/search_for_linkit.png)
+'![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878241/1/1490246920554/search_for_linkit.png)  
 
 f. Click on the LinkIt 7697 item, and then click the Install button, as shown below:  
 
-![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878240/1/1490246907913/install_board_package.png)
+![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878161/12878240/1/1490246907913/install_board_package.png)  
 
-g. The IDE should start downloading the required tools and software packages. Wait for its completion, and click Close to end the dialog.
+g. The IDE should start downloading the required tools and software packages. Wait for its completion, and click Close to end the dialog.  
 
 h. Once the package is installed, you should see a LinkIt 7697 item appear in the bottom of the Tools > Board menu, as shown below:  
 
@@ -55,7 +56,7 @@ h. Once the package is installed, you should see a LinkIt 7697 item appear in th
 
 i. Now that you've installed the board support package, you are ready to connect LinkIt 7697 board to your computer.  
 
-### 3. Install CP2102N Driver on Windows
+### 3. Install CP2102N Driver on Windows  
 
 a. Download and Install the Driver  
 
@@ -64,7 +65,7 @@ Choose the Download VCP option according to your operating system version. [Down
 
 b. Connect LinkIt 7697 to Computer  
 
-![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878250/12879244/1/1495605558797/board.jpg)
+![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878250/12879244/1/1495605558797/board.jpg)  
 
 c. Confirm Driver Installation  
 
@@ -81,13 +82,13 @@ After connecting the board to the computer, follow the steps below to confirm if
 
 ![](https://docs.labs.mediatek.com/resource/linkit7697-arduino/files/en/12878248/12878255/1/1490247794500/board_port_selection.png)  
 
-You're now ready to download sketches to the LinkIt 7697 board.
+You're now ready to download sketches to the LinkIt 7697 board.  
 
-### 4. Run Your First Sketch
+### 4. Run Your First Sketch  
 
 After setting up the IDE, we now upload a basic sketch to make sure everything is working properly.  
 
-## The Blink Example
+## The Blink Example  
 
 This is the most basic example sketch from the board - blink the onboard USR LED. To run the example, follow the below steps:  
 
@@ -111,7 +112,7 @@ f. It may take some time to compile and upload the sketch. During the uploading 
 
 g. The board will automatically reboot, and the USR LED should start to blink once every second.  
 
-Note that unlike Arduino Uno, the USR LED maps to P7 instead of P13 on the LinkIt 7697 board. Therefore the functional call:
+Note that unlike Arduino Uno, the USR LED maps to P7 instead of P13 on the LinkIt 7697 board. Therefore the functional call:  
 
 ```
 digital_write(LED_BUILTIN, HIGH);
@@ -121,4 +122,4 @@ is equal to:
 digital_write(7, HIGH); // 7 maps to P7 on LinkIt 7697 board
 ```
 
-Refer to the pinout diagram to find other pin mapping definitions.
+Refer to the pinout diagram to find other pin mapping definitions.  
