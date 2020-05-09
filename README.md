@@ -13,7 +13,7 @@ IDE: Arduino IDE 1.8.12 -> [Download Arduino IDE](https://www.arduino.cc/en/Main
 
 PS,如果照流程操作有任何問題，極有可能是因為板子或是傳輸線沒有插好，請把所有相關裝置重新拔掉插好
 
-## Setup Arduino IDE
+## Setup
 
 ### 1. Install Arduino IDE
 ### 2. Add Linkit 7697 Support Package
