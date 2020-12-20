@@ -27,7 +27,7 @@ while True:
     data = payload.decode('utf-8')
 
     t = time.localtime()
-    print("===== current time: =====\n", t.tm_hour+8, ":", t.tm_min, ":", t.tm_sec)
+    print("===== current time: =====\n", (t.tm_hour + 8) % 24, ":", t.tm_min, ":", t.tm_sec)
     print("===== server received: =====\n", data)
     send_data = "Hello, " + data
     s.sendto(send_data.encode('utf-8'), address)
